@@ -1,0 +1,11 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  font-family: "Roboto Mono", monospace;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
