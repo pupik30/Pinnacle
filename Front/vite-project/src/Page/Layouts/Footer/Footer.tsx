@@ -12,8 +12,19 @@ import { Photo } from "../../../file.ts";
 export default function Footer(): React.JSX.Element {
     return(
 <>
-<p>fdsafd</p>
+<section className={styles.OrangeFut}>
+
+<div className={styles.OrangeBg}>
+    <div className={styles.OrangeContent}>
+        <p className={styles.OrangeContentTXT} >Let’s Build <img src={Photo.Vector}/> Something Extraordinary Together</p>
+        <button className={styles.OrangeContentBTN}>View our projects</button>
+    </div>
+</div>
+</section>
 </>
 )
 }
+
+
+
 
