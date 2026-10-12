@@ -3,9 +3,12 @@
   padding: 0px;
 }
 body{
-  font-family: "Roboto Mono", monospace;
+  font-family: sans-serif;
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
+}
+html{
+  scroll-behavior: smooth;
 }
 

@@ -21,8 +21,8 @@ return (
         commercial properties, our team of experts is dedicated 
         to bringing your vision to life.</p>
         <div className={styles.MainBtn}>
-            <div className={styles.MainBtnL}>Schedule a Call</div>
-            <div className={styles.MainBtnR}>View Our Projucts</div>
+            <button className={styles.MainBtnL}>Schedule a Call</button>
+            <button className={styles.MainBtnR}>View Our Projucts</button>
         </div>
     </div>
     <div className={styles.MainDivTower}><img src={Photo.Tower} alt="" />

@@ -13,7 +13,7 @@ export default function Header(): React.JSX.Element {
 <>
 <header>
 
-    <div className={styles.headerBlockTop}>
+    <div className={styles.headerBlockTop}  id="Header">
         <div className={styles.headerJC}>
             <div className={styles.logoPhoto}>
                 <img src={Photo.Logo} alt="" />
