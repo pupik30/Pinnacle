@@ -22,11 +22,19 @@ interface qualityType {
   text: string;
   img: string;
 }
+interface gridType {
+  id: number;
+  title_text: string;
+  text: string;
+  img: string;
+}
+
 
 export default function MainPage(): React.JSX.Element {
 
   const [main, setMain] = useState<houseType[] | null>(null);
   const [main2, setMain2] = useState<qualityType[] | null>(null);
+  const [main3, setMain3] = useState<gridType[] | null>(null);
 
 
   useEffect(() => {
@@ -50,6 +58,16 @@ export default function MainPage(): React.JSX.Element {
         ])
         .then(([main2Rows]) => {
             setMain2(main2Rows);
+        })
+
+            //
+
+        Promise.all([
+        fetch('http://localhost:3000/main3', { signal: controller.signal })
+            .then((r) => r.json() as Promise<gridType[]>),
+        ])
+        .then(([main3Rows]) => {
+            setMain3(main3Rows);
         })
 
             //
@@ -311,13 +329,40 @@ return(
 
 
 <section className={styles.OurClientsSay}>
-        <article className={styles.OurClientsSayGrip}>
-
-
-        </article>
+    <div className={styles.OurClientsSayGrid}>
+        {main3 && main3.map((project) => (  
+            <article key={project.id} className={styles.OurClientsCard}>
+                <img src={project.img} />
+                <div className={styles.OurClientsP}>
+                    <p>{project.title_text}</p>                        
+                    <p>{project.text}</p>                        
+                </div>
+            </article>
+        ))}
+    </div>
 </section>
 
+    <section className={styles.headerContainer}>
+    <div className={styles.textBlock}>
 
+        <h2 className={styles.title}>
+        <span className={styles.accentIcon}></span>
+        Latest News
+        </h2>
+        
+        <p className={styles.description}>
+            We've built a reputation for delivering exceptional results and exceeding our clients' expectations. 
+            From luxurious residential homes to state-of-the-art commercial properties, our team of experts is
+            dedicated to bringing your vision to life.
+        </p>
+    </div>
+
+    <div className={styles.buttonBlock}>
+        <button className={styles.viewAllBtn}>
+        View all blog post
+        </button>
+    </div>
+    </section>
 </main>
 </>
 )

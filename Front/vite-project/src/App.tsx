@@ -18,8 +18,8 @@ function App() {
         <BrowserRouter>
           <Header/>
             <Routes>
-                <Route path='/' index element = {<MainPage/>}/>
-                <Route path='MainPage' element={<MainPage/>}/>
+              <Route path='/' index element = {<MainPage/>}/>
+              <Route path='MainPage' element={<MainPage/>}/>
             </Routes>  
           <Footer />
         </BrowserRouter>

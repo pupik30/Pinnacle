@@ -620,18 +620,63 @@ $color-tab-border: #262626;
     }
 }
 
-
+//secta
 .OurClientsSay{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    .OurClientsSayGrip{
+    height: 60vh;
+    .OurClientsSayGrid{
         display: grid;
         height: 85%;
         width: 60%;
+        grid-template-columns: repeat(2, 1fr); 
+        /* Расстояние между карточками */
+        gap: 20px; 
+        .OurClientsCard{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: start;
 
+            border-radius: 16px;
+            padding: 24px;
+
+            grid-template-columns: repeat(2, 1fr); 
+            /* Расстояние между карточками */
+            gap: 20px; 
+            border: 1px solid #2c2c2c;
+            img{
+                width: 25%;
+                display: flex;
+                justify-content: start;
+                flex-direction: column;
+                align-items: start;
+                
+            }
+            .OurClientsP{
+                width: 70%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                flex-direction: column;
+                p:first-child{
+                    color: #F0F0F0;
+                    font-size: 21px;
+                    font-style: Bold;
+                    font-weight: 600;
+
+                }
+                p:last-child{
+                    color: #C0C0BF;
+                    font-size: 18px; 
+                    font-style: Regular;
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
 

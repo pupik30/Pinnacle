@@ -18,6 +18,10 @@ import Starts2 from './assets/Starts2.png';
 import Group from './assets/Group.png'; 
 import Location from './assets/Location.png'; 
 import Card_image4 from './assets/Card_image4.png'; 
+import Rectangle4 from './assets/Rectangle4.png'; 
+import Rectangle3 from './assets/Rectangle3.png'; 
+import Rectangle2 from './assets/Rectangle2.png'; 
+import Rectangle1 from './assets/Rectangle1.png'; 
 
 
 
@@ -40,4 +44,8 @@ Starts2:Starts2,
 Group:Group,
 Location:Location,
 Card_image4:Card_image4,
+Rectangle4:Rectangle4,
+Rectangle3:Rectangle3,
+Rectangle2:Rectangle2,
+Rectangle1:Rectangle1,
 };
