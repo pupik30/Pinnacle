@@ -16,6 +16,9 @@ import shape from './assets/shape.png';
 import ClientImages from './assets/ClientImages.png'; 
 import Starts2 from './assets/Starts2.png'; 
 import Group from './assets/Group.png'; 
+import Location from './assets/Location.png'; 
+import Card_image4 from './assets/Card_image4.png'; 
+
 
 
 // В TS объект можно экспортировать напрямую с автовыведением типов
@@ -35,4 +38,6 @@ shape:shape,
 ClientImages:ClientImages,
 Starts2:Starts2,
 Group:Group,
+Location:Location,
+Card_image4:Card_image4,
 };

@@ -33,6 +33,20 @@ app.get('/main', async (req, res) => {
     }
 });
 
+app.get('/main2', async (req, res) => {
+    try {
+        const result = await pool.query('SELECT * FROM quality ORDER BY id');
+
+        res.json(result.rows);
+    } catch (error) {
+        console.error(error);
+
+        res.status(500).json({
+            message: 'Ошибка',
+        });
+    }
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
