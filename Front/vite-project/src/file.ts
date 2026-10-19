@@ -22,6 +22,7 @@ import Rectangle4 from './assets/Rectangle4.png';
 import Rectangle3 from './assets/Rectangle3.png'; 
 import Rectangle2 from './assets/Rectangle2.png'; 
 import Rectangle1 from './assets/Rectangle1.png'; 
+import Data from './assets/Data.png'; 
 
 
 
@@ -48,4 +49,5 @@ Rectangle4:Rectangle4,
 Rectangle3:Rectangle3,
 Rectangle2:Rectangle2,
 Rectangle1:Rectangle1,
+Data:Data,
 };

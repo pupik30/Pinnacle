@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import styles from './MainPage.module.scss';
 import { NavLink } from 'react-router-dom';
-// @ts-ignore — добавьте эту строку, если TypeScript ругается на отсутствие типов для file.js
 import { Photo } from "../../file.ts";
 import { useEffect } from 'react';
 
@@ -28,13 +27,26 @@ interface gridType {
   text: string;
   img: string;
 }
-
+interface main4Type {
+  id: number;
+  title_text: string;
+  btn_text: string;
+  data: string;
+  img: string;
+}
+interface main5Type {
+  id: number;
+  title_text: string;
+  text: string;
+  }
 
 export default function MainPage(): React.JSX.Element {
 
   const [main, setMain] = useState<houseType[] | null>(null);
   const [main2, setMain2] = useState<qualityType[] | null>(null);
   const [main3, setMain3] = useState<gridType[] | null>(null);
+  const [main4, setMain4] = useState<main4Type[] | null>(null);
+  const [main5, setMain5] = useState<main5Type[] | null>(null);
 
 
   useEffect(() => {
@@ -68,6 +80,26 @@ export default function MainPage(): React.JSX.Element {
         ])
         .then(([main3Rows]) => {
             setMain3(main3Rows);
+        })
+
+            //
+
+        Promise.all([
+        fetch('http://localhost:3000/main4', { signal: controller.signal })
+            .then((r) => r.json() as Promise<main4Type[]>),
+        ])
+        .then(([main4Rows]) => {
+            setMain4(main4Rows);
+        })
+
+            //
+
+        Promise.all([
+        fetch('http://localhost:3000/main5', { signal: controller.signal })
+            .then((r) => r.json() as Promise<main5Type[]>),
+        ])
+        .then(([main5Rows]) => {
+            setMain5(main5Rows);
         })
 
             //
@@ -303,7 +335,7 @@ return(
   <div className={styles.services_section_container}>
     
     <h2 className={styles.services_section_title}>
-      Quality service you get <span className={styles.services_section_asterisk}>*</span>
+      What Our Clients Say <span className={styles.services_section_asterisk}>*</span>
     </h2>
     
     <p className={styles.services_section_description}>
@@ -342,27 +374,74 @@ return(
     </div>
 </section>
 
-    <section className={styles.headerContainer}>
-    <div className={styles.textBlock}>
+<section className={styles.headerContainer}>
+<div className={styles.textBlock}>
 
-        <h2 className={styles.title}>
-        <span className={styles.accentIcon}></span>
-        Latest News
-        </h2>
-        
-        <p className={styles.description}>
-            We've built a reputation for delivering exceptional results and exceeding our clients' expectations. 
-            From luxurious residential homes to state-of-the-art commercial properties, our team of experts is
-            dedicated to bringing your vision to life.
-        </p>
-    </div>
+    <h2 className={styles.title}>
+    <span className={styles.accentIcon}></span>
+    Latest News
+    </h2>
+    
+    <p className={styles.description}>
+        We've built a reputation for delivering exceptional results and exceeding our clients' expectations. 
+        From luxurious residential homes to state-of-the-art commercial properties, our team of experts is
+        dedicated to bringing your vision to life.
+    </p>
+</div>
 
-    <div className={styles.buttonBlock}>
-        <button className={styles.viewAllBtn}>
-        View all blog post
-        </button>
+<div className={styles.buttonBlock}>
+    <button className={styles.viewAllBtn}>
+    View all blog post
+    </button>
+</div>
+</section>
+
+
+<section className={styles.DivBotom2}>
+    {main4 && main4.map((project) => (  
+        <div key={project.id} className={styles.CardHous}>
+            
+            <div className={styles.ImageHous}>
+                <img src={project.img} />
+            </div>
+            <div className={styles.CardText}>
+                <p>{project.btn_text}</p>
+                <h3>{project.title_text}</h3>
+                <div >
+                    <div className={styles.CardTextdiv}>
+                        <img src={Photo.Data} alt="" />
+                        <p className={styles.data}> {project.data} </p>
+                    </div>
+                    <a href="">Read more...</a>
+                </div>
+            </div>
+
+        </div>
+    ))}
+</section>
+
+<section className={styles.headerContainer}>
+<div className={styles.textBlock}>
+    <h2 className={styles.title}>
+        <span className={styles.accentIcon} style={{ fontSize: '32px' }}></span>
+    Frequently Asked Questions
+    </h2>
+</div>
+</section>
+
+<section className={styles.OurClientsSay2}>
+    <div className={styles.OurClientsSayGrid2}>
+        {main5 && main5.map((project) => (  
+            <article key={project.id} className={styles.OurClientsCard2}>
+                <div className={styles.OurClientsP2}>
+                    <p>{project.title_text}</p>                        
+                    <p>{project.text}</p>                        
+                </div>
+            </article>
+        ))}
     </div>
-    </section>
+</section>
+
 </main>
 </>
 )

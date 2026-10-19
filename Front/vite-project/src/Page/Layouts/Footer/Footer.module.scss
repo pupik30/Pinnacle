@@ -206,9 +206,9 @@ $color-accent: #f06434;
 }
 
 
-// Переменные для нижней панели
-$color-bottom-bg: #111111; // Чуть более светлый серый оттенок для фона плашки
-$color-social-bg: #1a1a1a; // Цвет квадратиков под иконки
+
+$color-bottom-bg: #111111;
+$color-social-bg: #1a1a1a;
 
 .footerBottom {
 background-color: $color-bottom-bg;

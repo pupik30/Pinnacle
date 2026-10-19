@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Page/Layouts/Header/Header.js'
 import Footer from './Page/Layouts/Footer/Footer.js'
 import MainPage from './Page/MainPage/MainPage.js'
+import ServicePage from './Page/ServicePage/ServicePage.js'
 
 
 
@@ -20,6 +21,7 @@ function App() {
             <Routes>
               <Route path='/' index element = {<MainPage/>}/>
               <Route path='MainPage' element={<MainPage/>}/>
+              <Route path='MainPage' element={<ServicePage/>}/>
             </Routes>  
           <Footer />
         </BrowserRouter>
