@@ -39,8 +39,43 @@ export default function ServicePage(): React.JSX.Element {
 return(
 
 <>
-<section className={styles.servisDiv}>
-<p>sdsad</p>
+<section className={styles.ServicePagemain}>
+
+  <section className={styles.servisDiv}>
+    <div className={styles.servsiv}>
+      <p>Bringing Your Vision to Life</p>
+      <p>Pinnacle's commitment to excellence extends beyond just constructing buildings - it's about crafting exceptional spaces that inspire and delight. </p>
+    </div>
+
+    <img src={Photo.imagehouse} alt="" />
+  </section>
+
+  <section className={styles.Residential}>
+    <div className={styles.servsiv}>
+      <p>Residential Construction</p>
+      <p>Pinnacle has a long history of delivering exceptional residential construction services, from custom homes to community developments 
+        to renovations. Our team of experts works closely with our clients to understand their unique needs and preferences, ensuring that every
+         project we undertake is a reflection of their personal style and vision.</p>
+    </div>
+  </section >
+
+  <section className={styles.LongestLong}>
+    <div className={styles.LeftLong}><button>Schedule a Calll</button></div>
+    <div className={styles.RightLong}>
+      <div className={styles.RightDiv}>
+        <p className={styles.title_text}>Custom Homes</p>
+        <p className={styles.text}>At Pinnacle, we specialize in designing and building custom homes
+          that are tailored to our clients' specific needs and preferences. Our team of architects
+          and designers work closely with our clients to create 
+          a home that is both beautiful and functional, incorporating the latest technologies and 
+          materials to ensure that it is energy-efficient, durable, and comfortable.</p>
+        <img src={Photo.imagehouse2} alt="" />
+
+
+      </div>
+    </div>
+
+  </section>
 
 </section>
 </>

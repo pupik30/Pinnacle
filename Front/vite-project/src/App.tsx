@@ -21,7 +21,7 @@ function App() {
             <Routes>
               <Route path='/' index element = {<MainPage/>}/>
               <Route path='MainPage' element={<MainPage/>}/>
-              <Route path='MainPage' element={<ServicePage/>}/>
+              <Route path='ServicePage' element={<ServicePage/>}/>
             </Routes>  
           <Footer />
         </BrowserRouter>
