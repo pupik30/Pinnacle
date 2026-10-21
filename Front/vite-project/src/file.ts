@@ -25,6 +25,7 @@ import Rectangle1 from './assets/Rectangle1.png';
 import Data from './assets/Data.png'; 
 import imagehouse from './assets/imagehouse.jpg'; 
 import imagehouse2 from './assets/imagehouse2.jpg'; 
+import MiniIcon6 from './assets/MiniIcon6.png'; 
 
 
 
@@ -54,4 +55,5 @@ Rectangle1:Rectangle1,
 Data:Data,
 imagehouse:imagehouse,
 imagehouse2:imagehouse2,
+MiniIcon6:MiniIcon6,
 };

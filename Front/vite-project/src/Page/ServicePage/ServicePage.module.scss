@@ -4,7 +4,7 @@
     background-image: url(../../assets/BgElements.png);
     background-repeat: no-repeat;
     background-size: cover;
-    pointer-events: none;
+
     overflow: hidden;
     display: flex;
     justify-content: space-evenly;
@@ -79,10 +79,15 @@
         width: 80%;
         display: flex;
         flex-direction: row;
-        align-items: end;
+        align-items: start;
         justify-content: space-between;
         .LeftLong{
             width: 30%;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            height: 100%;
+            justify-content: start;
             button{
                 padding: 3%;
                 color: #ffffff;
@@ -121,6 +126,270 @@
                 }
                 img{
                    width:  100%;
+                   overflow: hidden;  display: block;
+                   border-radius: 12px;
+                   margin-bottom: 5vh;
+                }
+            }
+        }
+    }
+    .Massage{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        .formdiv{
+            width: 65%;
+            height: 80%;
+            .formTitle{
+                p{
+                    color: #F0F0F0;
+                    font-size: 59px;
+                    font-weight: 600;
+                    font-style: Semibold;
+                    
+                }
+                span{
+                    color: #FC6E32;
+                    margin-right: 2vw;
+                    font-size: 72px;
+                }
+            }
+            .formMain{
+                width: 100%;
+                height: auto;
+                border: 1px solid #282726;
+                border-radius: 16px;
+                gap: 32px;
+                padding: 25px;
+                .formMainTop{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr); 
+                    justify-content: center;
+                    align-items: center;
+                    gap: 24px;
+                    .inputbox {
+                    width: 100%;
+                    height: 4vh;
+                    background: #00000000;
+                    border: 1px solid #282726;
+                    border-radius: 8px;
+                        &::placeholder {
+                            color: #ffffff;
+                            opacity: 1; 
+                            text-indent: 1vw;
+                        }
+                    }
+
+                    //
+                    .phoneInputCustom :global(.PhoneInput) {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px; /* Расстояние между блоком флага и инпутом телефона */
+                    width: 100%;
+                    }
+
+                    /* 1. Стилизуем левый блок — кнопку выбора флага */
+                    .phoneInputCustom :global(.PhoneInputCountry) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 4vh;
+                    min-width: 65px; /* Подбираем ширину, чтобы флаг и стрелочка поместились */
+                    background: transparent;
+                    border: 1px solid #282726;
+                    border-radius: 8px;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    }
+
+                    /* Делаем флаг круглым, как на макете */
+                    .phoneInputCustom :global(.PhoneInputCountryIcon--square) {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    }
+
+                    /* Стилизуем маленькую стрелочку выбора рядом с флагом */
+                    .phoneInputCustom :global(.PhoneInputCountrySelectArrow) {
+                    color: #888;
+                    margin-left: 6px;
+                    border-bottom-width: 1px;
+                    border-right-width: 1px;
+                    }
+
+                    /* 2. Стилизуем правый блок — само текстовое поле */
+                    .phoneInputCustom :global(.PhoneInputInput) {
+                    width: 100%;
+                    height: 4vh;
+                    background: transparent;
+                    border: 1px solid #282726;
+                    border-radius: 8px;
+                    color: #ffffff;
+                    font-size: 16px;
+                    padding-left: 40px; /* Сдвигаем текст вправо */
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='2' width='14' height='20' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='12' y1='18' x2='12.01' y2='18'%3E%3C/line%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                    background-position: 12px center;
+                    background-size: 18px;
+                    }
+
+                    /* Меняем цвет подсказки (placeholder) внутри инпута библиотеки */
+                    .phoneInputCustom :global(.PhoneInputInput)::placeholder {
+                    color: #ffffff;
+                    opacity: 1;
+                    }
+                    //////////////////////////
+                
+                    .selectWrapper {
+                        display: flex;
+                        align-items: center;
+                        width: 100%; 
+                        height: 4vh;
+                        background: transparent;
+                        border: 1px solid #282726; /* Рамка теперь здесь */
+                        border-radius: 8px;
+                        padding: 0 16px; /* Этот отступ аккуратно держит стрелочку (и иконку, если добавите) от краев */
+                    }
+                    .selectWrapper {
+                        display: flex;
+                        align-items: center;
+                        width: 100%; /* Занимает всю ширину сетки, как и было */
+                        background: transparent;
+                        border: 1px solid #282726; 
+                        border-radius: 8px;
+                        padding: 0 16px; /* Аккуратный отступ для стрелочки от правого края */
+                        box-sizing: border-box; /* Гарантирует, что паддинги не раздуют поле наружу */
+                    }
+                    .selectBox {
+                        flex-grow: 1; 
+                        height: 4vh; /* ВОЗВРАЩАЕМ ВЫСОТУ СЮДА — теперь размеры совпадут с инпутами */
+                        background: transparent;
+                        border: none; 
+                        outline: none;
+                        color: #f3f3f3;
+                        padding: 0; 
+                        margin-left: 0.5vw;
+                        cursor: pointer;
+                                            appearance: none; 
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                    }
+                    .arrowIcon {
+                        color: #888888;
+                        flex-shrink: 0; 
+                        margin-left: 8px; 
+                        /* САМАЯ ВАЖНАЯ СТРОКА: */
+                        pointer-events: none; 
+                    }
+                    .selectBox option {
+                        background-color: #1a1a1a; 
+                        color: #ffffff;           
+                    }
+                }
+                
+                .formMainMid {
+                display: flex;
+                align-items: flex-start; 
+                width: 100%;
+                background: transparent;
+                border: 1px solid #282726;
+                border-radius: 8px;
+                padding: 16px; /* Одинаковый отступ со всех сторон */
+                box-sizing: border-box;
+                margin-top: 24px;
+                margin-bottom: 24px;
+                }
+                .textareaBox {
+                flex-grow: 1;
+                height: 13vh; /* Задаем хорошую высоту, чтобы поле было большим */
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #f3f3f3;
+                padding: 0;
+
+                resize: none; 
+                font-family: inherit; 
+                }
+                .textareaBox::placeholder {
+                color: #ffffff;
+                opacity: 1;
+                }
+                .formMainBot{
+
+                    .formMainBotcheckbox{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-direction: row;
+                        .checkboxWrapper {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px; 
+                        cursor: pointer;
+                        }
+                        button{
+                            // padding: 3%;
+                            color: #ffffff;
+                            background: #FF5200;
+                            border: none;
+                            border-radius: 12px;
+                            cursor: pointer;
+                            width: 20%;
+                            height: 5vh;
+                            font-size: 24px;
+                            img{
+                                margin-left: 6px;
+                            }
+                        }
+                    }
+
+                    .customCheckbox {
+                        
+                        appearance: none;
+                        -webkit-appearance: none;
+                        
+                        /* Размеры и пропорции в точности как на скрине */
+                        width: 20px;
+                        height: 20px;
+                        flex-shrink: 0;
+                        
+                    
+                        background-color: #161616; /* Очень темный серый фон */
+                        border: 1px solid #282726;  /* Серая рамка формы */
+                        border-radius: 4px;        /* Легкое скругление углов */
+                    
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: background-color 0.2s ease, border-color 0.2s ease;
+                    &:hover {
+                        border-color: #504c44;
+                    }
+
+                    /* Поведение, когда галочка НАЖАТА */
+                    &:checked {
+                        background-color: #637062; /* Меняем фон на чуть более светлый при клике */
+                        
+                        /* Добавляем галочку внутрь через SVG-картинку на бэкграунде */
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 12px;
+                    }
+                    }
+
+                    .checkboxLabel {
+                    color: #888888;
+                    font-size: 14px;
+                    user-select: none; /* Чтобы текст не выделялся синим при частых кликах */
+                    cursor: pointer;
+                    }
+
                 }
             }
         }
