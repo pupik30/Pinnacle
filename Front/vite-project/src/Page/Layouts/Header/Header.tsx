@@ -21,7 +21,7 @@ export default function Header(): React.JSX.Element {
             <nav className={styles.nav}>
                 <NavLink to={"MainPage"}  className={({ isActive }) => (isActive ? `${styles.active} ${styles.activee}` : "")}>Home</NavLink>
                 <NavLink to={"1"} className={({isActive}) => (isActive ? `${styles.active} ${styles.active}`: "")}>About Us</NavLink>
-                <NavLink to={"2"} className={({isActive}) => (isActive ? `${styles.active} ${styles.active}`: "")}>Projects</NavLink>
+                <NavLink to={"ProjectsDetalis"} className={({isActive}) => (isActive ? `${styles.active} ${styles.active}`: "")}>Projects</NavLink>
                 <NavLink to={"ServicePage"} className={({isActive}) => (isActive ? `${styles.active} ${styles.active}`: "")}>Services</NavLink>
                 <NavLink to={"4"} className={({isActive}) => (isActive ? `${styles.active} ${styles.active}`: "")}>News</NavLink>
             </nav> 

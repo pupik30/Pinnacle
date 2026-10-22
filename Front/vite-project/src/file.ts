@@ -26,6 +26,8 @@ import Data from './assets/Data.png';
 import imagehouse from './assets/imagehouse.jpg'; 
 import imagehouse2 from './assets/imagehouse2.jpg'; 
 import MiniIcon6 from './assets/MiniIcon6.png'; 
+import Arrow from './assets/Arrow.png'; 
+import Rectangle13 from './assets/Rectangle13.jpg'; 
 
 
 
@@ -56,4 +58,6 @@ Data:Data,
 imagehouse:imagehouse,
 imagehouse2:imagehouse2,
 MiniIcon6:MiniIcon6,
+Arrow:Arrow,
+Rectangle13:Rectangle13,
 };
