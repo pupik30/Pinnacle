@@ -1,0 +1,387 @@
+.BlogDetailsPage{
+    width: 100%;
+    background-image: url(../../assets/BgElements.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .TopBar{
+        width: 80%;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 18vh;
+        margin-bottom: 4vh;
+
+        .BackLink{
+            color: #8D8D8C;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            &:hover{
+                color: #FF5200;
+            }
+        }
+    }
+
+    .BlogHero{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 6vh;
+
+        .BlogTag{
+            padding: 8px 14px;
+            margin-bottom: 24px;
+            background: #161514;
+            border: 1px solid #282726;
+            border-radius: 8px;
+            color: #C0C0BF;
+            font-size: 14px;
+        }
+
+        .HeroTitle{
+            max-width: 900px;
+            color: #F0F0F0;
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 100%;
+            margin-bottom: 24px;
+        }
+
+        .HeroInfo{
+            max-width: 720px;
+            color: #C0C0BF;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 170%;
+            margin-bottom: 32px;
+        }
+
+        .HeroMeta{
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+            .Author{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                span{
+                    color: #F0F0F0;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+            .MetaItem{
+                display: flex;
+                align-items: center;
+                color: #8D8D8C;
+                font-size: 15px;
+                img{
+                    width: 14px;
+                    height: 14px;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    .CoverImage{
+        width: 80%;
+        height: 60vh;
+        border-radius: 24px;
+        overflow: hidden;
+        margin-bottom: 8vh;
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+    }
+
+    .ContentLayout{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: 60px;
+        align-items: start;
+        margin-bottom: 12vh;
+
+        .Article{
+            display: flex;
+            flex-direction: column;
+            h2{
+                color: #F0F0F0;
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 120%;
+                margin: 32px 0 16px;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+            p{
+                color: #C0C0BF;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 175%;
+                margin-bottom: 20px;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin: 0 0 24px;
+                padding: 24px 24px 24px 44px;
+                background: #161514;
+                border: 1px solid #282726;
+                border-radius: 16px;
+                li{
+                    color: #C0C0BF;
+                    font-size: 17px;
+                    line-height: 160%;
+                    &::marker{
+                        color: #FF5200;
+                    }
+                }
+            }
+        }
+
+        .Sidebar{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: sticky;
+            top: 120px;
+
+            .SideCard{
+                display: flex;
+                flex-direction: column;
+                padding: 24px;
+                background: #161514;
+                border: 1px solid #282726;
+                border-radius: 16px;
+
+                .SideTitle{
+                    color: #F0F0F0;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 16px;
+                }
+
+                .TocList{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        color: #C0C0BF;
+                        font-size: 15px;
+                        line-height: 150%;
+                        padding-left: 14px;
+                        border-left: 2px solid #FF5200;
+                    }
+                }
+
+                .Socials{
+                    display: flex;
+                    gap: 10px;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        background: #0d0d0c;
+                        border: 1px solid #282726;
+                        border-radius: 8px;
+                        object-fit: contain;
+                        cursor: pointer;
+                        transition: border-color 0.2s ease;
+                        &:hover{
+                            border-color: #FF5200;
+                        }
+                    }
+                }
+            }
+
+            .CtaCard{
+                display: flex;
+                flex-direction: column;
+                padding: 24px;
+                background: #FF5200;
+                background: linear-gradient(to bottom, #ff733b 0%, #ff5714 100%);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+                border-radius: 16px;
+
+                .CtaTitle{
+                    color: #FFFFFF;
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 120%;
+                    margin-bottom: 10px;
+                }
+
+                .CtaText{
+                    color: rgba(255, 255, 255, 0.85);
+                    font-size: 15px;
+                    line-height: 150%;
+                    margin-bottom: 20px;
+                }
+
+                .CtaBtn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 48px;
+                    background: #0d0d0c;
+                    border-radius: 8px;
+                    color: #F0F0F0;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .RecentSection{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12vh;
+
+        .SectionHeader{
+            display: flex;
+            align-items: end;
+            margin-bottom: 4vh;
+
+            .SectionTitle{
+                color: #FFFFFF;
+                font-size: 38px;
+                font-weight: 600;
+                letter-spacing: -0.5px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                .accentIcon{
+                    display: inline-block;
+                    width: 14px;
+                    height: 28px;
+                    background-color: #FF5200;
+                    transform: skewX(-20deg);
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        .RecentGrid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .RecentCard{
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background: #0d0d0c;
+            border: 1px solid #262626;
+            border-radius: 24px;
+            text-decoration: none;
+            transition: border-color 0.2s ease;
+            &:hover{
+                border-color: #3a3837;
+            }
+
+            .RecentImage{
+                width: 100%;
+                height: 240px;
+                border-radius: 16px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    object-fit: cover;
+                }
+            }
+
+            .RecentText{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                padding: 20px 4px 4px;
+
+                h3{
+                    color: #F0F0F0;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 120%;
+                    margin: 12px 0 10px;
+                }
+
+                p{
+                    color: #C0C0BF;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    margin-bottom: 16px;
+                }
+            }
+
+            .BlogTag{
+                align-self: flex-start;
+                padding: 8px 14px;
+                background: #161514;
+                border: 1px solid #282726;
+                border-radius: 8px;
+                color: #C0C0BF;
+                font-size: 14px;
+            }
+
+            .RecentFooter{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: auto;
+                padding-top: 16px;
+                border-top: 1px solid #262626;
+
+                .RecentDate{
+                    display: flex;
+                    align-items: center;
+                    color: #8D8D8C;
+                    font-size: 14px;
+                    img{
+                        width: 14px;
+                        height: 14px;
+                        margin-right: 8px;
+                    }
+                }
+
+                .ReadMore{
+                    color: #FF5200;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

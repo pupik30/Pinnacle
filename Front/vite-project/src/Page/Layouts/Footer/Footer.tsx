@@ -17,7 +17,7 @@ export default function Footer(): React.JSX.Element {
       <div className={styles.OrangeBg}>
           <div className={styles.OrangeContent}>
               <p className={styles.OrangeContentTXT} >Let’s Build <img src={Photo.Vector}/> Something Extraordinary Together</p>
-              <a href="#Header" className={styles.OrangeContentBTN}>View our projects</a>
+              <NavLink to="/Projects" className={styles.OrangeContentBTN}>View our projects</NavLink>
           </div>
       </div>
   </section>
@@ -51,7 +51,7 @@ export default function Footer(): React.JSX.Element {
             <li><a href="#properties">Properties</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#faq">FAQ's</a></li>
-            <li><a href="#terms">Terms & Conditions</a></li>
+            <li><NavLink to="/PrivacyPolicy">Terms & Conditions</NavLink></li>
           </ul>
         </div>
 

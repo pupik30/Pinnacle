@@ -18,6 +18,9 @@ import Starts2 from './assets/Starts2.png';
 import Group from './assets/Group.png'; 
 import Location from './assets/Location.png'; 
 import Card_image4 from './assets/Card_image4.png'; 
+import Card_image from './assets/Card-image.png'; 
+import Card_image2 from './assets/Card-image2.png'; 
+import Card_image3 from './assets/Card-image3.png'; 
 import Rectangle4 from './assets/Rectangle4.png'; 
 import Rectangle3 from './assets/Rectangle3.png'; 
 import Rectangle2 from './assets/Rectangle2.png'; 
@@ -28,6 +31,14 @@ import imagehouse2 from './assets/imagehouse2.jpg';
 import MiniIcon6 from './assets/MiniIcon6.png'; 
 import Arrow from './assets/Arrow.png'; 
 import Rectangle13 from './assets/Rectangle13.jpg'; 
+import AboutTeam from './assets/AboutTeam.png'; 
+import AboutInterior from './assets/AboutInterior.png'; 
+import Member1 from './assets/Member1.png'; 
+import Member2 from './assets/Member2.png'; 
+import Member3 from './assets/Member3.png'; 
+import Avatar5 from './assets/Avatar5.png'; 
+import ProjectsMap from './assets/ProjectsMap.png'; 
+import ContactCover from './assets/ContactCover.png'; 
 
 
 
@@ -50,6 +61,9 @@ Starts2:Starts2,
 Group:Group,
 Location:Location,
 Card_image4:Card_image4,
+Card_image:Card_image,
+Card_image2:Card_image2,
+Card_image3:Card_image3,
 Rectangle4:Rectangle4,
 Rectangle3:Rectangle3,
 Rectangle2:Rectangle2,
@@ -60,4 +74,12 @@ imagehouse2:imagehouse2,
 MiniIcon6:MiniIcon6,
 Arrow:Arrow,
 Rectangle13:Rectangle13,
+AboutTeam:AboutTeam,
+AboutInterior:AboutInterior,
+Member1:Member1,
+Member2:Member2,
+Member3:Member3,
+Avatar5:Avatar5,
+ProjectsMap:ProjectsMap,
+ContactCover:ContactCover,
 };
