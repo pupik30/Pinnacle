@@ -39,11 +39,20 @@ import Member3 from './assets/Member3.png';
 import Avatar5 from './assets/Avatar5.png'; 
 import ProjectsMap from './assets/ProjectsMap.png'; 
 import ContactCover from './assets/ContactCover.png'; 
+import linkkk from './assets/linkkk.png'; 
+import Inbox from './assets/Inbox.png'; 
+import facebook from './assets/facebook.png'; 
+import instagram from './assets/instagram.png'; 
+import Union from './assets/Union.png'; 
 
 
 
 // В TS объект можно экспортировать напрямую с автовыведением типов
 export const Photo = {
+    Union:Union,
+    instagram:instagram,
+    facebook:facebook,
+    Inbox:Inbox,
 Logo:Logo,
 Tower:Tower,
 Eblo1:Eblo1,
@@ -82,4 +91,5 @@ Member3:Member3,
 Avatar5:Avatar5,
 ProjectsMap:ProjectsMap,
 ContactCover:ContactCover,
+linkkk:linkkk,
 };

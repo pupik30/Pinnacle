@@ -77,10 +77,38 @@ return(
     
     <div className={styles.LongR}>
       <div className={styles.Amenities}>
-        <div className={styles. Amenities_Table}></div>
-        <div className={styles.Amenities_Share}></div>
-        <div className={styles.Amenities_Bar}></div>
+        <div className={styles.Amenities_Table} >
+          <p>Amenities</p>
+          <p>Private movie theater</p>
+          <p>Indoor swimming pool</p>
+          <p>Fitness center</p>
+          <p>Private parking</p>
+          <p>Gated community</p>
+        </div>
       </div>
+        <div className={styles.Amenities_Share}>
+          <p>Share</p>
+          <div>
+            <img src={Photo.linkkk} alt="" />
+            <img src={Photo.Inbox} alt="" />
+            <img src={Photo.facebook} alt="" />
+            <img src={Photo.instagram} alt="" />
+            <img src={Photo.Union} alt="" />
+          </div>
+        </div>
+
+        <div className={styles.Amenities_Bar}>
+          <span className={styles.readTime}>5min Read</span>
+          <div className={styles.progressBarContainer}>
+            {/* Менять заполнение можно через inline-style width */}
+            <div className={styles.progressBarFill} style={{ width: '70%' }}></div>
+          </div>
+          <div className={styles.Schedule}>
+            <p>Have a project in your mind? </p>
+            <button>Schedule a free call</button>
+          </div>
+        </div>
+
     </div>
   </section>
 

@@ -28,7 +28,7 @@ const projects: projectType[] = [
     text: 'A modern commercial tower with flexible office floors, panoramic views and a public plaza on the ground level.',
     location: 'Douala',
     tag: 'Commercial',
-    img: Photo.Tower,
+    img: Photo.Card_image3,
   },
   {
     id: 3,
